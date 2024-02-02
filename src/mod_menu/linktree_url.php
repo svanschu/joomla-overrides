@@ -21,7 +21,12 @@ if ($item->anchor_title) {
     $attributes['title'] = $item->anchor_title;
 }
 
-$attributes['class'] = 'btn btn-primary btn-lg mb-3';
+$moduleclass_sfx = $params->get('moduleclass_sfx', '');
+$btn_class     = 'btn-primary';
+if (!empty($moduleclass_sfx))
+    $btn_class = $moduleclass_sfx;
+
+$attributes['class'] = 'btn ' . $btn_class . ' btn-lg mb-3';
 if ($item->anchor_css) {
     $attributes['class'] .= ' ' . $item->anchor_css;
 }
