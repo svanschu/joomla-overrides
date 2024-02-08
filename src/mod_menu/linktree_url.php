@@ -26,7 +26,7 @@ $btn_class     = 'btn-primary';
 if (!empty($moduleclass_sfx))
     $btn_class = $moduleclass_sfx;
 
-$attributes['class'] = 'btn ' . $btn_class . ' btn-lg mb-3';
+$attributes['class'] = 'btn ' . $btn_class . ' mb-3';
 if ($item->anchor_css) {
     $attributes['class'] .= ' ' . $item->anchor_css;
 }
@@ -37,7 +37,7 @@ if ($item->anchor_rel) {
 
 $linktype = '<div class="container">'
     . '<div class="row align-items-center">'
-    . '<div class="col col-md-1">';
+    . '<div class="col col-4 col-md-1">';
 
 if ($item->menu_image) {
     // The link is an image, maybe with an own class
@@ -57,7 +57,7 @@ if ($item->menu_image) {
 $titles = explode("___", $item->title);
 
 $linktype .= '</div>'
-    . '<div class="col col-md-11">'
+    . '<div class="col col-8 col-md-11">'
     . $titles[0];
 if (count($titles) >= 2) {
     $linktype .= '<br />'
